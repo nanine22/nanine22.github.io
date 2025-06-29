@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>มิเตอร์แบบเข็มจำลอง</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="meter-container">
+        <h1 class="title">มิเตอร์แบบเข็มจำลอง</h1>
+        
+        <div class="meter-face" id="meterFace">
+            <div class="scale-container" id="scaleContainer"></div>
+            <div class="mirror-strip"></div>
+            <div class="needle" id="needle"></div>
+        </div>
+
+        <div class="controls">
+            <select class="measurement-type" id="measurementType">
+                <option value="voltage">แรงดันไฟฟ้า (V)</option>
+                <option value="current">กระแสไฟฟ้า (A)</option>
+                <option value="resistance">ความต้านทาน (Ω)</option>
+            </select>
+
+            <select class="range-selector" id="rangeSelector">
+                <option value="10">0-10V</option>
+                <option value="50">0-50V</option>
+                <option value="250">0-250V</option>
+            </select>
+        </div>
+
+        <div class="display-panel">
+            <div class="reading-display">
+                <div class="reading-item">
+                    <div class="reading-label">ค่าที่วัดได้</div>
+                    <div class="reading-value" id="measuredValue">0.00 V</div>
+                </div>
+                <div class="reading-item">
+                    <div class="reading-label">ตำแหน่งเข็ม</div>
+                    <div class="reading-value" id="needlePosition">0°</div>
+                </div>
+                <div class="reading-item">
+                    <div class="reading-label">ช่วงการวัด</div>
+                    <div class="reading-value" id="currentRange">0-10V</div>
+                </div>
+                <div class="reading-item">
+                    <div class="reading-label">ความละเอียด</div>
+                    <div class="reading-value" id="resolution">0.20 V</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
